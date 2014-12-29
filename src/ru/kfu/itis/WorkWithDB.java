@@ -78,7 +78,7 @@ public class WorkWithDB {
                 + dateArray[1]
                 + "-"
                 + dateArray[0];
-        String query = "SELECT COUNT(1) FROM Invoice WHERE DateStart>? " +
+        String query = "SELECT * FROM Invoice WHERE DateStart>? " +
                 "AND CustomerINN = ? " +
                 "AND CountNumber IN(SELECT CountNumber " +
                 "FROM Books_in_invoice WHERE BookID = ?)";
@@ -90,6 +90,7 @@ public class WorkWithDB {
         statement.setInt(3, bookIDInt);
         res = statement.executeQuery();
         while(res.next()){
+            System.out.println(res.getInt(1));
             int countNumber = res.getInt("CountNumber");
             String dateStart = res.getString("DateStart");
             double value = res.getDouble("Value");
