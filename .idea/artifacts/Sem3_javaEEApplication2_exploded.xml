@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="Sem3:javaEEApplication2 exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Sem3_javaEEApplication2_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Sem3/javaeeApplication/javaEEApplication2" />
+    </root>
+  </artifact>
+</component>
